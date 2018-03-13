@@ -1,0 +1,10 @@
+.Content {
+    text-align: center;
+    margin: auto;
+}
+
+.Footer-message {
+    color: grey;
+    font-size: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+}

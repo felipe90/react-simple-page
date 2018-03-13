@@ -1,0 +1,7 @@
+.Content {
+  width: 90%;
+}
+
+.Content * {
+  text-align: left;
+}

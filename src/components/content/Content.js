@@ -1,7 +1,14 @@
 import React, { Component } from 'react';
 import './Content.css';
 
+
+import PropTypes from 'prop-types'
+
 class Content extends Component {
+  static propTypes = {
+    body: PropTypes.object.isRequired
+  }
+
   constructor() {
     super();
 
@@ -55,9 +62,11 @@ class Content extends Component {
   }
 
   render() {
+
+    const {body} = this.props;
     return (
       <div className="Content">
-        <h2 className="Content-title">Content</h2>
+        {/* <h2 className="Content-title">Content</h2>
         <p className="Content-intro">Counter : {this.state.count}</p>
         <button id="add" onClick={this.handleIncreseCounter}>+</button>
         <button id="subtract" onClick={this.handleDecreaseCounter}>-</button>
@@ -67,7 +76,8 @@ class Content extends Component {
         <input id="userName" type="text" value={this.state.userName} onChange={this.handleInputChange} />
         <label>Last Name:</label>        
         <input id="userLastname" type="text" value={this.state.userLastname} onChange={this.handleInputChange} />
-        <p>Hello {this.state.userName} {this.state.userLastname}</p> 
+        <p>Hello {this.state.userName} {this.state.userLastname}</p>  */}
+        {body}
       </div>
     );
   }

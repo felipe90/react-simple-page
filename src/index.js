@@ -4,13 +4,12 @@ import { BrowserRouter } from 'react-router-dom'
 import registerServiceWorker from './registerServiceWorker';
 
 import './index.css';
-import App from './components/App'
+import AppRoutes from './routes'
 
 
 ReactDOM.render((
     <BrowserRouter>
-        <App>
-        </App>
+        <AppRoutes/>
     </BrowserRouter>
 ), document.getElementById('root'));
 

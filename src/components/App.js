@@ -12,8 +12,8 @@ class App extends Component {
     return (
       <div className="App">
         <Header title="React Course" menuItems={menuItems}/>
-        <AppRoutes />
         {/* <Content /> */}
+        <AppRoutes />
         <Footer copy="React Course - 2018. CopyRight."/>
       </div>
     );

@@ -5,7 +5,7 @@ class Blog extends Component {
   render() {
     return (
       <div className="Blog">
-        Blog        
+        <h1>Blog</h1>        
       </div>
     );
   }

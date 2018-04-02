@@ -6,14 +6,12 @@ class Content extends Component {
     super();
 
     this.state = {
-      count: 0,
-      // userName: '',
-      // userLastname: ''
+      count: 0
     }
 
-    this.increseCounter = this.increseCounter.bind(this);
-    this.decreaseCounter = this.decreaseCounter.bind(this);
-    this.resetCounter = this.resetCounter.bind(this);
+    this.handleIncreseCounter = this.handleIncreseCounter.bind(this);
+    this.handleDecreaseCounter = this.handleDecreaseCounter.bind(this);
+    this.handleResetCounter = this.handleResetCounter.bind(this);
     this.handleInputChange = this.handleInputChange.bind(this)
   }
 
@@ -26,19 +24,19 @@ class Content extends Component {
     }, 1000)
   }
 
-  increseCounter() {
+  handleIncreseCounter() {
     this.setState({
       count: this.state.count + 1
     })
   }
 
-  decreaseCounter() {
+  handleDecreaseCounter() {
     this.setState({
       count: this.state.count - 1
     })
   }
 
-  resetCounter() {
+  handleResetCounter() {
     this.setState({
       count: 0
     })
@@ -61,9 +59,9 @@ class Content extends Component {
       <div className="Content">
         <h2 className="Content-title">Content</h2>
         <p className="Content-intro">Counter : {this.state.count}</p>
-        <button id="add" onClick={this.increseCounter}>+</button>
-        <button id="subtract" onClick={this.decreaseCounter}>-</button>
-        <button id="reset" onClick={this.resetCounter}>Reset</button>
+        <button id="add" onClick={this.handleIncreseCounter}>+</button>
+        <button id="subtract" onClick={this.handleDecreaseCounter}>-</button>
+        <button id="reset" onClick={this.handleResetCounter}>Reset</button>
         <h2 className="Content-title">Form</h2>
         <label>Name:</label>
         <input id="userName" type="text" value={this.state.userName} onChange={this.handleInputChange} />
